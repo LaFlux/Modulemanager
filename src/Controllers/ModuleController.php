@@ -55,7 +55,7 @@ class ModuleController extends Controller
         $allmodules = \DB::table('extension_manager')
                             ->selectRaw('CONCAT(vendor, "-", name) as module_name, id')
                             ->Where('status',1)
-                            ->Where('package_type','Module')
+                            ->Where('package_type','laflux-module')
                             ->WhereNull('deleted_at')
                             ->pluck("module_name",'id');
 

@@ -16,7 +16,8 @@ class ModuleSeeder extends Seeder
                      $data = [
                         'name' => 'Modulemanager'
                         ,'vendor' => 'ExtensionValley'
-                        ,'description' => 'laflux-package'
+                        ,'description' => 'Module manager for laflux platform'
+                        ,'package_type' => 'laflux-package'
                         ,'version' => '1.0.0'
                         ,'is_paid' => '0'
                         ,'status' => 0
