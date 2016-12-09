@@ -122,7 +122,7 @@ class ModuleController extends Controller
              $moduleinfo =  \DB::table('extension_manager')
                             ->Where('status',1)
                             ->Where('id',$module_id)
-                            ->Where('package_type','Module')
+                            ->Where('package_type','laflux-module')
                             ->WhereNull('deleted_at')
                             ->first();
         }
