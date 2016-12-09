@@ -1,70 +1,83 @@
-# :package_name
+# Modulemanager Component for Laflux
 
-[![Latest Version on Packagist][ico-version]][link-packagist]
-[![Software License][ico-license]](LICENSE.md)
-[![Build Status][ico-travis]][link-travis]
-[![Coverage Status][ico-scrutinizer]][link-scrutinizer]
-[![Quality Score][ico-code-quality]][link-code-quality]
-[![Total Downloads][ico-downloads]][link-downloads]
+Laflux is a Hybrid Platform built with Laravel 5.3. This is the Modulemanager component for Laflux.
 
-**Note:** Replace ```:author_name``` ```:author_username``` ```:author_website``` ```:author_email``` ```:vendor``` ```:package_name``` ```:package_description``` with their correct values in [README.md](README.md), [CHANGELOG.md](CHANGELOG.md), [CONTRIBUTING.md](CONTRIBUTING.md), [LICENSE.md](LICENSE.md) and [composer.json](composer.json) files, then delete this line. You can run `$ php prefill.php` in the command line to make all replacements at once. Delete the file prefill.php as well.
+## Getting Started
 
-This is where your description should go. Try and limit it to a paragraph or two, and maybe throw in a mention of what
-PSRs you support to avoid any confusion with users and contributors.
+Modulemanager component is used for managing different modules. You can add new modules on the specified locations via this modulemanager.Checkout the demo for more details.Click here for the [Demo](http://demo.laflux.com/admin/dashboard). Default Username : demo@laflux.com, Password : 123456.
 
-## Install
+### Prerequisites
 
-Via Composer
+Laflux platform : http://www.github.com/Laflux/Laflux. Checkout the demo of Laflux: [Front end demo](http://demo.laflux.com/), [Back end demo](http://demo.laflux.com/admin/dashboard)
 
-``` bash
-$ composer require :vendor/:package_name
+### Installing
+
+The default Laflux platform includes all the necessary packages including this one. This component has been added as a submodule in the Laflux.However, you can install this component separately via two methods.
+
+1.) Download the component as zip and upload directly into the system via Laflux Extension manager component.
+
+2.) Manual Installation (Via git clone)
+
+Clone the repository in to the Directory, root directory/packages/ExtensionsValley/ . After cloning, run the following commands.
+
+```
+php artisan vendor:publish 
+php artisan migrate
+composer dumpautoload -o
 ```
 
-## Usage
+If you add this repository as a submodule, you can automatically update the repository, whenever there is a new update.To add this repository as a submodule, go to the root directory of Laflux and run the following command:
 
-``` php
-$skeleton = new League\Skeleton();
-echo $skeleton->echoPhrase('Hello, League!');
+```
+git submodule add https://github.com/LaFlux/Modulemanager.git packages/ExtensionsValley/Modulemanager/
+
+php artisan vendor:publish 
+php artisan db:seed --class=ModuleSeeder
+composer dumpautoload -o
 ```
 
-## Change log
+## Deployment
 
-Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
+This component is completely ready for deployment. Installation is all you have to do.
 
-## Testing
+## Built With
 
-``` bash
-$ composer test
-```
+* [LARAVEL](https://laravel.com/) - The web framework used
+* [COMPOSER](https://getcomposer.org/) - Dependency Management
 
-## Contributing
+## Authors
 
-Please see [CONTRIBUTING](CONTRIBUTING.md) and [CONDUCT](CONDUCT.md) for details.
-
-## Security
-
-If you discover any security related issues, please email :author_email instead of using the issue tracker.
-
-## Credits
-
-- [:author_name][link-author]
-- [All Contributors][link-contributors]
+* **Jobin Jose** - *Initial work* - [Jobin Jose](https://github.com/Jobinjose01)
+* **Jinto Antony** - *Initial work* - [Jinto Antony](https://github.com/JintoAntony)
 
 ## License
 
-The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
-[ico-version]: https://img.shields.io/packagist/v/:vendor/:package_name.svg?style=flat-square
-[ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
-[ico-travis]: https://img.shields.io/travis/:vendor/:package_name/master.svg?style=flat-square
-[ico-scrutinizer]: https://img.shields.io/scrutinizer/coverage/g/:vendor/:package_name.svg?style=flat-square
-[ico-code-quality]: https://img.shields.io/scrutinizer/g/:vendor/:package_name.svg?style=flat-square
-[ico-downloads]: https://img.shields.io/packagist/dt/:vendor/:package_name.svg?style=flat-square
+## Acknowledgments
 
-[link-packagist]: https://packagist.org/packages/:vendor/:package_name
-[link-travis]: https://travis-ci.org/:vendor/:package_name
-[link-scrutinizer]: https://scrutinizer-ci.com/g/:vendor/:package_name/code-structure
-[link-code-quality]: https://scrutinizer-ci.com/g/:vendor/:package_name
-[link-downloads]: https://packagist.org/packages/:vendor/:package_name
-[link-author]: https://github.com/:author_username
-[link-contributors]: ../../contributors
+* Laflux platform Documentation - [Documentation](http://docs.laflux.com/)
+* Updates - Pull this repository for latest updates
+* Premium Version of Laflux - [Premium Version](http://extensionsvalley.com/downloads/laravel-admin-dashboard/)
+
+### Premium Version features:
+* 100% Upgrade Guaranteed
+* Laravel 5.2 or 5.3 to Kick Start
+* User Management
+* User Groups Management
+* Powerful Access Control Logic (ACL)
+* Inbuilt Data Tables Support
+* Easy CRUD Management
+* Extension Manager for integrating many packages
+* Data Export options for all Tables
+* Rapid Customization Options
+* Full Admin Theme
+* Clean and Professional UI
+* Inbuilt CSS3, HTML5, Bootstrap Support
+* Free Lifetime Updates
+* Comparable with All-Modern-Browsers
+* Multiple Icon Fonts
+* Retina-Ready Design
+* etc.
+
+
